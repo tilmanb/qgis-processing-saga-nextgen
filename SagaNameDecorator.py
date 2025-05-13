@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 
+"""
+This module holds the known algorithms and provides friendly names and groups.
+"""
+
 groups = {
 'ta_slope_stability': 'Terrain Analysis',
 'pointcloud_tools': 'Features',
@@ -61,7 +65,8 @@ groups = {
 'grid_tools': 'Tool Chains'}
 
 def decoratedGroupName(name):
-	return groups.get(name, name)
+    """Get the decorated group name. If it is not set in the groups dict, returns the name as-given."""
+    return groups.get(name, name)
 
 algorithms = {
 'SAFETYFACTOR': 'SAFETYFACTOR',
@@ -622,5 +627,5 @@ algorithms = {
 'Change a Grid''s No-Data Value [Bulk Processing]': 'Change a Raster''s No-Data Value [Bulk Processing]'}
 
 def decoratedAlgorithmName(name):
-	return algorithms.get(name, name)
-
+    """Get the decorated algorithm name. If it is not set in the algorithms dict, returns the name as-given."""
+    return algorithms.get(name, name)
