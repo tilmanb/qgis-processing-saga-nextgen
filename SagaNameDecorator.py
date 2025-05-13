@@ -4,7 +4,7 @@
 This module holds the known algorithms and provides friendly names and groups.
 """
 
-groups = {
+groups = { # pylint:disable=duplicate-key
 'ta_slope_stability': 'Terrain Analysis',
 'pointcloud_tools': 'Features',
 'imagery_maxent': 'Imagery',
@@ -64,11 +64,13 @@ groups = {
 'tta_tools': 'Tool Chains',
 'grid_tools': 'Tool Chains'}
 
+
 def decoratedGroupName(name):
     """Get the decorated group name. If it is not set in the groups dict, returns the name as-given."""
     return groups.get(name, name)
 
-algorithms = {
+
+algorithms = { # pylint:disable=duplicate-key
 'SAFETYFACTOR': 'SAFETYFACTOR',
 'TOBIA': 'TOBIA',
 'SHALSTAB': 'SHALSTAB',
